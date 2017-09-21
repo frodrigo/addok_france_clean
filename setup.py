@@ -19,11 +19,11 @@ with open('requirements.txt', encoding='utf-8') as reqs:
     install_requires = [l for l in reqs.read().split('\n') if is_pkg(l)]
 
 setup(
-    name='addok_france_clean',
+    name='addok_luxembourg_clean',
     version=".".join(map(str, VERSION)),
     description="Addok plugin to support more french addresses clean.",
     long_description=long_description,
-    url='https://github.com/Mapotempo/addok_france_clean',
+    url='https://github.com/Mapotempo/addok_luxembourg_clean',
     author='Frédéric Rodrigo',
     author_email='frederic@mapotempo.com',
     license='WTFPL',
@@ -40,10 +40,10 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    keywords='addok geocoding france plugin',
+    keywords='addok geocoding luxembourg plugin',
     packages=find_packages(exclude=['tests']),
     install_requires=install_requires,
     extras_require={'test': ['pytest']},
     include_package_data=True,
-    entry_points={'addok.ext': ['france_clean=addok_france_clean']},
+    entry_points={'addok.ext': ['luxembourg_clean=addok_luxembourg_clean']},
 )
